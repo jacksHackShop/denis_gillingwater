@@ -55,10 +55,10 @@
 
 
 					<div id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<div id="header_button" class="desktop_only">
-							Books
-						</div>
-						<div class="desktop_only" id='books'>
+						<a id="header_button" class="desktop_only">
+							Books</a>
+						<div class="desktop_only" id='book_nav'>
+							<ul id="book_items">
 							<?php
 								$iterable = 1; 
 								$gallery_query = new WP_Query(array('post_type' => "book_gallery"));
@@ -66,18 +66,17 @@
 									while ($gallery_query->have_posts()) : 
 										$gallery_query->the_post(); ?>
 
-								<p class="header_number">
-									<?php echo $iterable ?> 
-									<a class="header_title" href=<?php the_permalink(); ?>> 
-										<?php the_title(); ?> 
-									</a>
-								</p>
+								<li class="book_item">
+									<a class="book_id"><?php echo $iterable?></a>
+									<a class="book_title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+								</li>
 							<?php
 							$iterable++;
 							endwhile;
 							endif;
 							wp_reset_postdata();
 							?>
+						</ul>
 						</div>
 
 					</div>

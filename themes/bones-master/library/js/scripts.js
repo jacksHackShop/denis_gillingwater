@@ -130,13 +130,11 @@ window.addEventListener('DOMContentLoaded', function(){
     var book = document.getElementById('navigation');
     //Happens after open added
     if(book.classList.contains('open')){
-      book.classList.add('close');
       book.classList.remove('open');
     }
     //Should happen first
     else{
       book.classList.add('open');
-      book.classList.remove('close');
     }
   });
 });

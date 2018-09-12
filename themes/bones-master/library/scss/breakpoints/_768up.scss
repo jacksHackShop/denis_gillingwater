@@ -409,116 +409,103 @@ MY STYLES
 	display: initial;
 }
 #navigation {
-	display: inline-block;
 	width: calc(100% - 290px);
-    position: relative;
-
+	display: inline-block;
 
 	#header_button {
 		background-color: $light-gray;
+		color: $dark-gray;
 		font-size: 20px;
 		display: block;
-	    width: 70px;
-	    padding: 0 7px;
-	    margin: 0 auto;
-	    cursor: pointer;
-	    color: $dark-gray;
-	    z-index:10;
-	    position: relative;
-	    top: 40px;	
-	}
-
-	#books {
-		width: 100%;
-		display: block;
+	 	width: 70px;
+	 	text-align: center;
+		margin: 0 auto;
+		cursor: pointer;
 		position: relative;
-		text-align: center;
-		letter-spacing:-5px;
-		.header_number{
-			display: inline-block;
-			position: relative;
-			cursor: pointer;
-			.header_title{
-				display: none;
-			}
-		}	
-	}
-
-	&.open {
-
-		#header_button {
-			background-color: $gray;
+		transition: margin-top 1s 1s;
+		z-index:10;
+	    transition: background-color .5s, color .5s;
+	    &:hover{
+	    	background-color: $gray;
 			color: $light-gray;
-			bottom: -30px;
-		}
-
-		#books {
-			animation-name: open;
-			animation-duration: 3s;
-			letter-spacing: 15px;
-			bottom: -30px;
-			
-			.header_number{
-				&:hover {
-					visibility: hidden;
-					letter-spacing: 0;
-					.header_title{
-						margin-right: 20px;
-						visibility: visible;
-						letter-spacing: 0;
-						color: $light-gray;
-						position: relative;
-						display:inline-block;
-						text-decoration: none;
-					}
-				}
-			}
-		}
-
+	    }
 	}
 
-	&.close {
-		#books {
-			animation-name: close;
-			animation-duration: 3s;
+	#book_nav {
+		overflow:hidden;
+  		text-align:center;
+	    position:absolute;
+	    display:inline-block;
+	    text-align:center;
+	    width: calc(100% - 285px);
+  		margin-top:-20px;
+    	opacity:0;
+  		letter-spacing:-1em;
+  		transition: all 1s, margin-top 1s 1s, opacity 1s .5s;	
+
+  		#book_items{
+  			padding:0;
+		    list-style:none;
+		    text-align:center;
+		    .book_item{
+		    	display:inline-block;
+			    cursor:pointer;
+			    text-align:center;
+			    position:relative;
+			    overflow:auto;
+			    transition: all 1s;
+			    margin:0 0 0 -10px;
+			    min-width:10px;
+			    #navigation.open &{
+			    	transition: margin 1s 1s;
+			      	margin:0 15px 0 0px;
+			    }
+			    .book_id {
+			    	position: absolute;
+        			left:15%;
+        			display:inline;
+        			opacity:1;
+        			transition:opacity .8s .5s;
+			    }
+			    .book_title {
+			    	letter-spacing: 0;
+			    	max-width: 0;
+			        white-space: nowrap;
+			        display: inline-block;
+			        overflow: hidden;
+			        opacity:0;
+			        transition: max-width 1s ease-out, opacity 1s;
+			    }
+			    &:hover{
+			    	.book_id{
+          				opacity:0;
+        				transition:opacity .5s;
+        			}
+        			.book_title{
+          				opacity:1;
+          				max-width: 120px;
+        			}
+			    }
+		    }
+  		}
+	}
+	&.open{
+		#header_button{
+			background-color: $gray;
+	    	color: $light-gray;
+   			margin-top:-20px;
+    		transition: margin-top 1s;
+		}
+		#book_nav{
+			margin-top:-10px;
+		    opacity:1;
+		    letter-spacing:10px;
+		    transition: all 1s, letter-spacing 1s 1s;
+		    .book_item{
+		    	transition: margin 1s 1s;
+        		margin:0 15px 0 0px;
+		    }
 		}
 	}
 }
-
-@keyframes open {
-	0%{
-		opacity: 0;
-		bottom: 0px;
-		letter-spacing:-5px;
-	}
-	30%{
-		letter-spacing:-2px;
-	}
-	50% {
-		bottom: -30px;
-	}
-	100%{
-		opacity: 1;
-		bottom: -30px;
-		letter-spacing: 15px;
-	}
-}
-
-@keyframes close {
-	0%{
-		opacity: 1;
-		bottom: -30px;
-		letter-spacing: 15px;		
-	}
-	50%{
-		bottom: -30px;
-	}
-	70%{
-		letter-spacing:-2px;
-	}
-	100%{
-		bottom: 0px;
-		opacity: 0;
-		letter-spacing:-5px;
-	}
-}
+	

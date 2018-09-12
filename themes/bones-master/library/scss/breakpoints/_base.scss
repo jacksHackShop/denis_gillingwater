@@ -938,6 +938,14 @@ MY STYLES
 	padding-right: 10%;
 	padding-left: 10%;
 	background-color: $dark-gray;
+	display: flex;
+	flex-direction: column;
+
+
+	.copyright{
+		margin-top: auto;
+		font-size: 80%;
+	} 
 }
 //Single
 .gallery_single {

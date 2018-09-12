@@ -37,8 +37,8 @@
 							<?php endwhile; ?>
 							<div class="about">
 								<h2><?php the_title(); ?></h2>
-								<p><?php the_field("about"); ?></p>
-								<p class="copyright"> Copyright Denis Gillingwater </p>
+								<div class="about_text"><?php the_field("about"); ?></div>
+								<p class="copyright"> © 2018 Denis Gillingwater </p>
 
 							</div>
 

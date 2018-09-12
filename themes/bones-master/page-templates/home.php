@@ -42,8 +42,10 @@ $about = get_field("about_the_artist");
 							<?php endwhile;?>
 							</div>
 							<div class="about">
-								<?php echo $about; ?>
-								<p class="copyright"> Copyright Denis Gillingwater </p>
+								<div class="about_text">
+									<?php echo $about; ?>
+								</div>
+								<p class="copyright"> © 2018 Denis Gillingwater </p>
 							</div>
 							<?php else : ?>
 									<article id="post-not-found" class="hentry cf">
