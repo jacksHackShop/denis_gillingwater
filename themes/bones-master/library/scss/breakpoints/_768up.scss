@@ -413,6 +413,7 @@ MY STYLES
 	display: inline-block;
 
 	#header_button {
+		top: 15px;
 		background-color: $light-gray;
 		color: $dark-gray;
 		font-size: 20px;
@@ -422,9 +423,8 @@ MY STYLES
 		margin: 0 auto;
 		cursor: pointer;
 		position: relative;
-		transition: margin-top 1s 1s;
 		z-index:10;
-	    transition: background-color .5s, color .5s;
+	    transition: background-color .5s, color .5s, top 1s 1s;
 	    &:hover{
 	    	background-color: $gray;
 			color: $light-gray;
@@ -441,13 +441,14 @@ MY STYLES
   		margin-top:-20px;
     	opacity:0;
   		letter-spacing:-1em;
-  		transition: all 1s, margin-top 1s 1s, opacity 1s .5s;	
+  		transition: all 1s, margin-top 1s 1s, opacity 1s;	
 
   		#book_items{
   			padding:0;
 		    list-style:none;
 		    text-align:center;
 		    .book_item{
+		    	vertical-align: text-top;
 		    	display:inline-block;
 			    cursor:pointer;
 			    text-align:center;
@@ -456,10 +457,6 @@ MY STYLES
 			    transition: all 1s;
 			    margin:0 0 0 -10px;
 			    min-width:10px;
-			    #navigation.open &{
-			    	transition: margin 1s 1s;
-			      	margin:0 15px 0 0px;
-			    }
 			    .book_id {
 			    	position: absolute;
         			left:15%;
@@ -472,6 +469,7 @@ MY STYLES
 			    	max-width: 0;
 			        white-space: nowrap;
 			        display: inline-block;
+			        text-decoration: none;
 			        overflow: hidden;
 			        opacity:0;
 			        transition: max-width 1s ease-out, opacity 1s;
@@ -484,6 +482,7 @@ MY STYLES
         			.book_title{
           				opacity:1;
           				max-width: 120px;
+          				text-decoration: none;
         			}
 			    }
 		    }
@@ -493,14 +492,14 @@ MY STYLES
 		#header_button{
 			background-color: $gray;
 	    	color: $light-gray;
-   			margin-top:-20px;
-    		transition: margin-top 1s;
+   			top:0px;
+    		transition: top 1s;
 		}
 		#book_nav{
 			margin-top:-10px;
 		    opacity:1;
-		    letter-spacing:10px;
-		    transition: all 1s, letter-spacing 1s 1s;
+		    letter-spacing:20px;
+		    transition: all 1s, letter-spacing 1s 1s, opacity 1s .25s;
 		    .book_item{
 		    	transition: margin 1s 1s;
         		margin:0 15px 0 0px;

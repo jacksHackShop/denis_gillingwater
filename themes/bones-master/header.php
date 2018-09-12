@@ -65,12 +65,11 @@
 								if ($gallery_query->have_posts()) : 
 									while ($gallery_query->have_posts()) : 
 										$gallery_query->the_post(); ?>
-
-								<li class="book_item">
-									<a class="book_id"><?php echo $iterable?></a>
-									<a class="book_title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-								</li>
-							<?php
+								<li class="book_item"><!--
+									--><a class="book_id"><?php echo $iterable?></a><!--
+									--><a class="book_title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><!--
+								--></li><!--	
+							--><?php
 							$iterable++;
 							endwhile;
 							endif;

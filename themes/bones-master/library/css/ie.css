@@ -560,6 +560,7 @@ MY STYLES
 }
 /* line 415, ../scss/breakpoints/_768up.scss */
 #navigation #header_button {
+  top: 15px;
   background-color: #b3b3b3;
   color: #333333;
   font-size: 20px;
@@ -569,9 +570,8 @@ MY STYLES
   margin: 0 auto;
   cursor: pointer;
   position: relative;
-  transition: margin-top 1s 1s;
   z-index: 10;
-  transition: background-color .5s, color .5s;
+  transition: background-color .5s, color .5s, top 1s 1s;
 }
 /* line 428, ../scss/breakpoints/_768up.scss */
 #navigation #header_button:hover {
@@ -589,7 +589,7 @@ MY STYLES
   margin-top: -20px;
   opacity: 0;
   letter-spacing: -1em;
-  transition: all 1s, margin-top 1s 1s, opacity 1s .5s;
+  transition: all 1s, margin-top 1s 1s, opacity 1s;
 }
 /* line 446, ../scss/breakpoints/_768up.scss */
 #navigation #book_nav #book_items {
@@ -599,6 +599,7 @@ MY STYLES
 }
 /* line 450, ../scss/breakpoints/_768up.scss */
 #navigation #book_nav #book_items .book_item {
+  vertical-align: text-top;
   display: inline-block;
   cursor: pointer;
   text-align: center;
@@ -608,12 +609,7 @@ MY STYLES
   margin: 0 0 0 -10px;
   min-width: 10px;
 }
-/* line 459, ../scss/breakpoints/_768up.scss */
-#navigation.open #navigation #book_nav #book_items .book_item {
-  transition: margin 1s 1s;
-  margin: 0 15px 0 0px;
-}
-/* line 463, ../scss/breakpoints/_768up.scss */
+/* line 460, ../scss/breakpoints/_768up.scss */
 #navigation #book_nav #book_items .book_item .book_id {
   position: absolute;
   left: 15%;
@@ -621,41 +617,43 @@ MY STYLES
   opacity: 1;
   transition: opacity .8s .5s;
 }
-/* line 470, ../scss/breakpoints/_768up.scss */
+/* line 467, ../scss/breakpoints/_768up.scss */
 #navigation #book_nav #book_items .book_item .book_title {
   letter-spacing: 0;
   max-width: 0;
   white-space: nowrap;
   display: inline-block;
+  text-decoration: none;
   overflow: hidden;
   opacity: 0;
   transition: max-width 1s ease-out, opacity 1s;
 }
-/* line 480, ../scss/breakpoints/_768up.scss */
+/* line 478, ../scss/breakpoints/_768up.scss */
 #navigation #book_nav #book_items .book_item:hover .book_id {
   opacity: 0;
   transition: opacity .5s;
 }
-/* line 484, ../scss/breakpoints/_768up.scss */
+/* line 482, ../scss/breakpoints/_768up.scss */
 #navigation #book_nav #book_items .book_item:hover .book_title {
   opacity: 1;
   max-width: 120px;
+  text-decoration: none;
 }
-/* line 493, ../scss/breakpoints/_768up.scss */
+/* line 492, ../scss/breakpoints/_768up.scss */
 #navigation.open #header_button {
   background-color: #808080;
   color: #b3b3b3;
-  margin-top: -20px;
-  transition: margin-top 1s;
+  top: 0px;
+  transition: top 1s;
 }
-/* line 499, ../scss/breakpoints/_768up.scss */
+/* line 498, ../scss/breakpoints/_768up.scss */
 #navigation.open #book_nav {
   margin-top: -10px;
   opacity: 1;
-  letter-spacing: 10px;
-  transition: all 1s, letter-spacing 1s 1s;
+  letter-spacing: 20px;
+  transition: all 1s, letter-spacing 1s 1s, opacity 1s .25s;
 }
-/* line 504, ../scss/breakpoints/_768up.scss */
+/* line 503, ../scss/breakpoints/_768up.scss */
 #navigation.open #book_nav .book_item {
   transition: margin 1s 1s;
   margin: 0 15px 0 0px;
