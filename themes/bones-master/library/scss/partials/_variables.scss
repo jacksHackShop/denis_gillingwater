@@ -46,6 +46,12 @@ $link-hover:        darken($link-color, 9%);
 $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;
 
+$open-distance:     40px;
+$open-time:         .5s;
+
+$dark-hover: lighten($dark-gray, 10%);
+$light-hover:   darken($light-gray, 10%);
+
 
 /*
 Here's a great tutorial on how to
