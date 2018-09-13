@@ -125,6 +125,7 @@ jQuery(document).ready(function($) {
 */
 
 window.addEventListener('DOMContentLoaded', function(){
+  // add open toggle to header button
   var button = document.getElementById("header_button");
   button.addEventListener('click', function(){
     var book = document.getElementById('navigation');
@@ -137,6 +138,8 @@ window.addEventListener('DOMContentLoaded', function(){
       book.classList.add('open');
     }
   });
+
+  // create listeners
 });
 
 
