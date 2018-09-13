@@ -60,8 +60,15 @@
 						<div class="desktop_only" id='book_nav'>
 							<ul id="book_items">
 							<?php
+								$args = array(
+								'post_type' => "book_gallery", 
+								'posts_per_page' => "-1", 
+								'meta_key' => "nav_weight", 
+								'orderby' => "meta_value", 
+								'order' => "ASC"
+							);
 								$iterable = 1; 
-								$gallery_query = new WP_Query(array('post_type' => "book_gallery"));
+								$gallery_query = new WP_Query( $args );
 								if ($gallery_query->have_posts()) : 
 									while ($gallery_query->have_posts()) : 
 										$gallery_query->the_post(); ?>
