@@ -23,7 +23,15 @@ $about = get_field("about_the_artist");
 						<main id="main" class="m-all t-3of3 d-7of7 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							<div class="galleries">
 							<?php 
-							$gallery_query = new WP_Query(array('post_type' => "book_gallery"));
+							$args = array(
+								'post_type' => "book_gallery", 
+								'posts_per_page' => "-1", 
+								'meta_key' => "nav_weight", 
+								'orderby' => "meta_value", 
+								'order' => "ASC"
+							);
+
+							$gallery_query = new WP_Query( $args );
 							if ($gallery_query->have_posts()) : while ($gallery_query->have_posts()) : $gallery_query->the_post();
 							$gallery = get_field('book_gallery');
 							?>

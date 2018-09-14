@@ -59,17 +59,24 @@
 						<div class="desktop_only" id='book_nav'>
 							<ul id="book_items">
 							<?php
+								$args = array(
+									'post_type' => "book_gallery", 
+									'posts_per_page' => "-1", 
+									'meta_key' => "nav_weight", 
+									'orderby' => "meta_value", 
+									'order' => "ASC"
+								);
 								// store title before wp_query over rights the post
 								$current_title = get_the_title($post->ID);
 								$iterable = 1; 
-								$gallery_query = new WP_Query(array('post_type' => "book_gallery"));
+								$gallery_query = new WP_Query( $args );
 								if ($gallery_query->have_posts()) : 
 									while ($gallery_query->have_posts()) : 
 										$gallery_query->the_post(); ?>
-								<li class="book_item <?php if(get_the_title() === $current_title) echo 'current' ; ?>"><!--
-									--><a class="book_id" href="<?php the_permalink(); ?>"><?php echo $iterable?></a><!--
-									--><a class="book_title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><!--
-								--></li><!--	
+											<li class="book_item <?php if(get_the_title() === $current_title) echo 'current' ; ?>"><!--
+												--><a class="book_id" href="<?php the_permalink(); ?>"><?php echo $iterable?></a><!--
+												--><a class="book_title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><!--
+											--></li><!--	
 							--><?php
 							$iterable++;
 							endwhile;
