@@ -55,8 +55,7 @@
 
 
 					<div id="navigation" itemscope class="<?php if(get_post_type() === 'book_gallery') echo 'open'?>" itemtype="http://schema.org/SiteNavigationElement">
-						<a id="header_button" class="desktop_only">
-							Books</a>
+						<a id="header_button" class="desktop_only">View Books</a>
 						<div class="desktop_only" id='book_nav'>
 							<ul id="book_items">
 							<?php
