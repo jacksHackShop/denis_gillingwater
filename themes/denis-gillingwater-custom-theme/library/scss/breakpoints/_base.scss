@@ -984,6 +984,10 @@ MY STYLES
 	background-color: $dark-gray;
 	& a{
 		font-size: 3em;
+	    background-color: $light-gray;
+	    color: $dark-gray;
+	    padding: 10px;
+	    text-decoration: none;
 	}
 
 }

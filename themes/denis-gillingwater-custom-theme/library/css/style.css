@@ -2252,6 +2252,10 @@ MY STYLES
 /* line 985, ../scss/breakpoints/_base.scss */
 #post-not-found a {
   font-size: 3em;
+  background-color: #b3b3b3;
+  color: #333333;
+  padding: 10px;
+  text-decoration: none;
 }
 
 /*********************
