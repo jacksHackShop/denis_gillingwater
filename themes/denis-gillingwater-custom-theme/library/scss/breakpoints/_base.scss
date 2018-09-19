@@ -981,5 +981,9 @@ MY STYLES
 //404
 
 #post-not-found {
-	background-color: none;
+	background-color: $dark-gray;
+	& a{
+		font-size: 3em;
+	}
+
 }
