@@ -2245,6 +2245,11 @@ MY STYLES
   display: none;
 }
 
+/* line 983, ../scss/breakpoints/_base.scss */
+#post-not-found {
+  background-color: none;
+}
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
