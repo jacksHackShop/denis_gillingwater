@@ -28,8 +28,7 @@
 							<article class="gallery_single" id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
 								<?php for ($i=0; $i < count($gallery); $i++) : ?>
 									<div class="picture_item">
-										<div class="picture_thumb" style="background-image:url('<?php echo $gallery[$i]['url']; ?>')">
-										</div>
+										<img class="picture_thumb" src="<?php echo $gallery[$i]['url']; ?>">
 									</div>
 								<?php endfor; ?>
 							</article>
