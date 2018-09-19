@@ -2247,7 +2247,11 @@ MY STYLES
 
 /* line 983, ../scss/breakpoints/_base.scss */
 #post-not-found {
-  background-color: none;
+  background-color: #333333;
+}
+/* line 985, ../scss/breakpoints/_base.scss */
+#post-not-found a {
+  font-size: 3em;
 }
 
 /*********************

@@ -1,5 +1,5 @@
-<?php get_header(); ?>
 
+<a id="logo" href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
