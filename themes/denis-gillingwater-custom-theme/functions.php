@@ -150,6 +150,8 @@ function bones_theme_customizer($wp_customize) {
 
 add_action( 'customize_register', 'bones_theme_customizer' );
 
+
+
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas
@@ -242,6 +244,66 @@ function bones_fonts() {
   wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 }
 
+
 add_action('wp_enqueue_scripts', 'bones_fonts');
+
+add_role(
+ 'Owner',
+ 'Owner',
+ array(
+   'edit_others_pages' => true,
+   'edit_others_posts' => true,
+   'edit_pages' => true,
+   'edit_posts' => true,
+   'edit_private_pages' => true,
+   'edit_private_posts' => true,
+   'edit_published_pages' => true,
+   'edit_published_posts' => true,
+   'edit_plugins' => true,
+   'edit_theme_options' => true,
+   'read_private_pages' => true,
+   'read_private_posts' => true,
+   'read' => true,
+   'upload_files' => true,
+   'manage_options' => true,
+   'activate_plugins' => false,
+   'delete_others_pages' => true,
+   'delete_others_posts' => true,
+   'delete_pages' => true,
+   'delete_posts' => true,
+   'delete_private_pages' => true,
+   'delete_private_posts' => true,
+   'delete_published_pages' => true,
+   'delete_published_posts' => true,
+   'edit_dashboard' => false,
+   'export' => false,
+   'import' => false,
+   'list_users' => false,
+   'manage_categories' => true,
+   'manage_links' => true,
+   'moderate_comments' => true,
+   'promote_users' => false,
+   'publish_pages' => true,
+   'publish_posts' => true,
+   'remove_users' => false,
+   'switch_themes' => false,
+   'customize' => false,
+   'delete_site' => false,
+   'update_core' => true,
+   'update_plugins' => true,
+   'update_themes' => false,
+   'install_plugins' => false,
+   'install_themes' => false,
+   'upload_plugins' => false,
+   'upload_themes' => false,
+   'delete_themes' => false,
+   'delete_plugins' => false,
+   'edit_themes' => false,
+   'edit_files' => false,
+   'create_users' => false,
+   'delete_users' => false,
+   'unfiltered_html' => false
+ )
+);
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
