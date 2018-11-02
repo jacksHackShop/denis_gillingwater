@@ -32,7 +32,9 @@ $current_post_id = get_the_ID();
 								'order' => "ASC"
 							);
 
+
 							$gallery_query = new WP_Query( $args );
+
 							if ($gallery_query->have_posts()) : while ($gallery_query->have_posts()) : $gallery_query->the_post();
 							$gallery = get_field('book_gallery');
 							?>
@@ -54,7 +56,9 @@ $current_post_id = get_the_ID();
 							<div class="about desktop_only">
 								<h2>ARTIST STATEMENT</h2>
 								<div class="about_text">
+									<div id="artist_statement" data-artist-statement="<?php echo htmlentities(get_field('artist_statement'), ENT_QUOTES); ?>" >
 									<?php echo substr(get_field('artist_statement'), 0, 1000); ?>...
+									</div>
 									<div id="more_button" class="text_button">SEE MORE</div>
 								</div>
 								<p class="copyright"> © 2018 Denis Gillingwater </p>
