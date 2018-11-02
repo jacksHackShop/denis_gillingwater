@@ -738,7 +738,7 @@ body#tinymce.wp-editor p {
 /* line 109, ../scss/editor-style.scss */
 body#tinymce.wp-editor table {
   width: 100%;
-  border: 1px solid #808080;
+  border: 1px solid #8E8E8E;
   margin-bottom: 1.5em;
 }
 /* line 114, ../scss/editor-style.scss */
@@ -751,7 +751,7 @@ body#tinymce.wp-editor table caption {
 }
 /* line 123, ../scss/editor-style.scss */
 body#tinymce.wp-editor tr {
-  border-bottom: 1px solid #808080;
+  border-bottom: 1px solid #8E8E8E;
 }
 /* line 125, ../scss/editor-style.scss */
 body#tinymce.wp-editor tr:nth-child(even) {
@@ -760,7 +760,7 @@ body#tinymce.wp-editor tr:nth-child(even) {
 /* line 130, ../scss/editor-style.scss */
 body#tinymce.wp-editor td {
   padding: 7px;
-  border-right: 1px solid #808080;
+  border-right: 1px solid #8E8E8E;
 }
 /* line 134, ../scss/editor-style.scss */
 body#tinymce.wp-editor td:last-child {
@@ -769,8 +769,8 @@ body#tinymce.wp-editor td:last-child {
 /* line 139, ../scss/editor-style.scss */
 body#tinymce.wp-editor th {
   background-color: #b3b3b3;
-  border-bottom: 1px solid #808080;
-  border-right: 1px solid #808080;
+  border-bottom: 1px solid #8E8E8E;
+  border-right: 1px solid #8E8E8E;
 }
 /* line 144, ../scss/editor-style.scss */
 body#tinymce.wp-editor th:last-child {

@@ -35,7 +35,7 @@
 
 							<?php endwhile; ?>
 							<div class="about">
-								<h2><?php the_title(); ?></h2>
+								<h2 class="about_title"><?php the_title(); ?></h2>
 								<div class="about_text"><?php the_field("about"); ?></div>
 								<p class="copyright"> © 2018 Denis Gillingwater </p>
 

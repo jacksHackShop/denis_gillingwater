@@ -124,20 +124,55 @@ jQuery(document).ready(function($) {
  * My Functions
 */
 
+// apply open class to each element in elements array
+function openElements(elements){
+  var isOpen = false;
+  elements.forEach(function (element) {
+    if (element.classList.contains('open') || isOpen) {
+      isOpen = true;
+    }
+  }); 
+  if (isOpen) {
+    elements.forEach(function (element) {
+      element.classList.remove('open');
+    });
+  } else {
+    elements.forEach(function (element) {
+      element.classList.add('open');
+    });
+  }
+}
+
 window.addEventListener('DOMContentLoaded', function(){
   // add open toggle to header button
   var button = document.getElementById("header_button");
   button.addEventListener('click', function(){
-    var book = document.getElementById('navigation');
-    //Happens after open added
-    if(book.classList.contains('open')){
-      book.classList.remove('open');
-    }
-    //Should happen first
-    else{
-      book.classList.add('open');
-    }
+    var elements = [document.getElementById('navigation')];
+    openElements(elements);
   });
+
+
+  document.getElementById('hamburger').addEventListener('click', function (e) {
+    var elements = [
+      document.getElementById('hamburger'),
+      document.getElementById('mobile_nav')
+    ];
+    openElements(elements);
+  });
+
+  var close_modal = document.getElementById('close_modal');
+  if (close_modal) {
+    close_modal.addEventListener('click', function(e) {
+      document.getElementById('modal_wrapper').classList.remove('open');
+    });
+  }
+
+  var more_button = document.getElementById('more_button');
+  if (more_button) {
+    more_button.addEventListener('click', function(e) {
+      document.getElementById('modal_wrapper').classList.add('open');
+    });
+  }
 
   // create listeners
 });

@@ -48,6 +48,37 @@
 
 					<div id="navigation" itemscope class="<?php if(get_post_type() === 'book_gallery') echo 'open'?>" itemtype="http://schema.org/SiteNavigationElement">
 						<a id="header_button" class="desktop_only">View Books</a>
+						<div class="mobile_only" id="hamburger_nav">
+							<div id="hamburger">
+							    <div id="top" class="bun"></div>
+							    <div id="middle" class="bun"></div>
+							    <div id="bottom" class="bun"></div>
+							</div>
+							<div id="mobile_nav">
+								<ul>
+								<?php
+									// store title before wp_query over rights the post
+									$current_title = get_the_title($post->ID);
+									$args = [
+										'post_type' => "book_gallery", 
+										'posts_per_page' => "-1", 
+										'meta_key' => "nav_weight", 
+										'orderby' => "meta_value", 
+										'order' => "ASC"
+									];
+									$iterable = 1; 
+									$gallery_query = new WP_Query( $args );
+									while ($gallery_query->have_posts()) : 
+										$gallery_query->the_post();?>
+										<li>
+											<a href="<?php the_permalink();?>">
+												<?php the_title(); ?>
+											</a>
+										</li>
+									<?php endwhile;?>
+								</ul>
+							</div>
+						</div>
 						<div class="desktop_only" id='book_nav'>
 							<ul id="book_items">
 							<?php
@@ -58,8 +89,7 @@
 									'orderby' => "meta_value", 
 									'order' => "ASC"
 								);
-								// store title before wp_query over rights the post
-								$current_title = get_the_title($post->ID);
+								
 								$iterable = 1; 
 								$gallery_query = new WP_Query( $args );
 								if ($gallery_query->have_posts()) : 
