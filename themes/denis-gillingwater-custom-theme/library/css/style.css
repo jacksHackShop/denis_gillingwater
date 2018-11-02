@@ -1103,7 +1103,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 .blue-btn, .comment-reply-link, #submit {
   display: inline-block;
   position: relative;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Source Sans Pro, Arial, sans-serif;
   text-decoration: none;
   color: #fff;
   font-size: 0.9em;
@@ -1197,8 +1197,8 @@ textarea,
   border: 0;
   width: 100%;
   max-width: 400px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #808080;
+  font-family: "Helvetica Neue", Helvetica, Source Sans Pro, Arial, sans-serif;
+  background-color: #8E8E8E;
   -webkit-transition: background-color 0.24s ease-in-out;
   transition: background-color 0.24s ease-in-out;
 }
@@ -1236,7 +1236,7 @@ textarea:focus,
 textarea:active,
 .field:focus,
 .field:active {
-  background-color: #8a8a8a;
+  background-color: #989898;
   outline: none;
 }
 /* line 66, ../scss/modules/_forms.scss */
@@ -1683,7 +1683,7 @@ POSTS & CONTENT STYLES
 
 /* line 259, ../scss/breakpoints/_base.scss */
 .hentry {
-  background-color: #808080;
+  background-color: #8E8E8E;
   margin-top: 5%;
   margin-bottom: 5%;
   margin-left: 5%;
@@ -1747,7 +1747,7 @@ POSTS & CONTENT STYLES
 /* line 344, ../scss/breakpoints/_base.scss */
 .entry-content table {
   width: 100%;
-  border: 1px solid #808080;
+  border: 1px solid #8E8E8E;
   margin-bottom: 1.5em;
 }
 /* line 349, ../scss/breakpoints/_base.scss */
@@ -1760,7 +1760,7 @@ POSTS & CONTENT STYLES
 }
 /* line 358, ../scss/breakpoints/_base.scss */
 .entry-content tr {
-  border-bottom: 1px solid #808080;
+  border-bottom: 1px solid #8E8E8E;
 }
 /* line 361, ../scss/breakpoints/_base.scss */
 .entry-content tr:nth-child(even) {
@@ -1769,7 +1769,7 @@ POSTS & CONTENT STYLES
 /* line 366, ../scss/breakpoints/_base.scss */
 .entry-content td {
   padding: 7px;
-  border-right: 1px solid #808080;
+  border-right: 1px solid #8E8E8E;
 }
 /* line 370, ../scss/breakpoints/_base.scss */
 .entry-content td:last-child {
@@ -1778,8 +1778,8 @@ POSTS & CONTENT STYLES
 /* line 375, ../scss/breakpoints/_base.scss */
 .entry-content th {
   background-color: #b3b3b3;
-  border-bottom: 1px solid #808080;
-  border-right: 1px solid #808080;
+  border-bottom: 1px solid #8E8E8E;
+  border-right: 1px solid #8E8E8E;
 }
 /* line 380, ../scss/breakpoints/_base.scss */
 .entry-content th:last-child {
@@ -1884,7 +1884,7 @@ PAGE NAVI STYLES
   float: left;
   display: inline;
   overflow: hidden;
-  border-right: 1px solid #808080;
+  border-right: 1px solid #8E8E8E;
 }
 /* line 522, ../scss/breakpoints/_base.scss */
 .pagination a, .pagination span {
@@ -2167,14 +2167,14 @@ MY STYLES
 /* line 902, ../scss/breakpoints/_base.scss */
 .galleries .book_gallery .book_wrapper {
   display: block;
-  height: 35vh;
+  height: 0;
+  padding-top: 100%;
   width: 100%;
-  display: block;
   position: relative;
 }
 /* line 909, ../scss/breakpoints/_base.scss */
 .galleries .book_gallery .book_wrapper .gallery_item {
-  background-color: #808080;
+  background-color: #8E8E8E;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -2184,18 +2184,22 @@ MY STYLES
   width: 80%;
   height: 80%;
   margin: 10%;
-  background-size: cover;
+  position: absolute;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center center;
 }
-/* line 925, ../scss/breakpoints/_base.scss */
+/* line 928, ../scss/breakpoints/_base.scss */
 .galleries .book_gallery .hover_thumb {
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center center;
 }
 
-/* line 935, ../scss/breakpoints/_base.scss */
+/* line 939, ../scss/breakpoints/_base.scss */
 .about {
   margin-top: 5%;
   margin-bottom: 0%;
@@ -2205,25 +2209,25 @@ MY STYLES
   display: flex;
   flex-direction: column;
 }
-/* line 945, ../scss/breakpoints/_base.scss */
+/* line 949, ../scss/breakpoints/_base.scss */
 .about .copyright {
   margin-top: auto;
   font-size: 80%;
 }
 
-/* line 951, ../scss/breakpoints/_base.scss */
+/* line 955, ../scss/breakpoints/_base.scss */
 .gallery_single {
   overflow-x: scroll;
   white-space: nowrap;
-  background-color: #808080;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  background-color: #8E8E8E;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-/* line 958, ../scss/breakpoints/_base.scss */
+/* line 962, ../scss/breakpoints/_base.scss */
 .picture_item {
   display: inline-block;
-  background-color: #808080;
+  background-color: #8E8E8E;
   position: relative;
   text-align: center;
   height: 35vh;
@@ -2233,23 +2237,152 @@ MY STYLES
   margin-top: 10%;
 }
 
-/* line 969, ../scss/breakpoints/_base.scss */
+/* line 973, ../scss/breakpoints/_base.scss */
 .picture_thumb {
   height: 100%;
   background-size: cover;
   background-position: center center;
 }
 
-/* line 976, ../scss/breakpoints/_base.scss */
+/* line 980, ../scss/breakpoints/_base.scss */
 .desktop_only {
   display: none;
 }
 
-/* line 983, ../scss/breakpoints/_base.scss */
+/* line 984, ../scss/breakpoints/_base.scss */
+html {
+  overflow-x: hidden;
+}
+
+/* line 988, ../scss/breakpoints/_base.scss */
+#navigation {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+/* line 993, ../scss/breakpoints/_base.scss */
+#navigation #mobile_nav {
+  position: fixed;
+  background-color: #333333;
+  color: #8E8E8E;
+  z-index: 4;
+  padding: 5px;
+  width: 200px;
+  right: -210px;
+  border: 1px transparent solid;
+  transition: right .3s ease-in , border .3s ease-in;
+}
+/* line 1003, ../scss/breakpoints/_base.scss */
+#navigation #mobile_nav.open {
+  right: -10px;
+  transition: right .3s ease-out , border .5s .15s ease-out;
+  border: 1px #8E8E8E solid;
+}
+/* line 1008, ../scss/breakpoints/_base.scss */
+#navigation #mobile_nav ul {
+  padding: 14px;
+  margin: 0px;
+}
+/* line 1011, ../scss/breakpoints/_base.scss */
+#navigation #mobile_nav ul li {
+  padding: 5px 0px;
+}
+/* line 1013, ../scss/breakpoints/_base.scss */
+#navigation #mobile_nav ul li a {
+  text-decoration: none;
+}
+/* line 1019, ../scss/breakpoints/_base.scss */
+#navigation #hamburger_nav #hamburger {
+  width: 50px;
+  height: 50px;
+  padding: 2.5px;
+}
+/* line 1023, ../scss/breakpoints/_base.scss */
+#navigation #hamburger_nav #hamburger .bun {
+  width: 100%;
+  height: 4px;
+  background-color: #8E8E8E;
+  margin-bottom: 10px;
+  transition: all .3s ease-out;
+  transform-origin: 0px 2px;
+}
+/* line 1031, ../scss/breakpoints/_base.scss */
+#navigation #hamburger_nav #hamburger.open .bun {
+  width: 88%;
+}
+/* line 1035, ../scss/breakpoints/_base.scss */
+#navigation #hamburger_nav #hamburger.open #top {
+  transform: translateX(20%) rotate(45deg);
+}
+/* line 1039, ../scss/breakpoints/_base.scss */
+#navigation #hamburger_nav #hamburger.open #middle {
+  opacity: 0;
+}
+/* line 1043, ../scss/breakpoints/_base.scss */
+#navigation #hamburger_nav #hamburger.open #bottom {
+  transform: translateX(20%) rotate(-45deg);
+}
+
+/* line 1051, ../scss/breakpoints/_base.scss */
+.modal_wrapper .modal #modal_content {
+  max-width: 80%;
+  margin: auto;
+}
+/* line 1054, ../scss/breakpoints/_base.scss */
+.modal_wrapper .modal #modal_content section {
+  margin-top: 10px;
+}
+
+/* line 1065, ../scss/breakpoints/_base.scss */
+#about_modal #cv .cv_list li {
+  margin-bottom: 30px;
+  text-align: center;
+}
+/* line 1068, ../scss/breakpoints/_base.scss */
+#about_modal #cv .cv_list li:after {
+  content: "";
+  border-bottom: 1px solid #8E8E8E;
+  width: 100px;
+  margin-top: 15px;
+  margin-left: -50px;
+  position: absolute;
+}
+/* line 1076, ../scss/breakpoints/_base.scss */
+#about_modal #cv .cv_list li:last-child:after {
+  display: none;
+}
+/* line 1079, ../scss/breakpoints/_base.scss */
+#about_modal #cv .cv_list li a {
+  text-decoration: none;
+}
+/* line 1081, ../scss/breakpoints/_base.scss */
+#about_modal #cv .cv_list li a .venue {
+  text-decoration: underline;
+}
+/* line 1085, ../scss/breakpoints/_base.scss */
+#about_modal #cv .cv_list li p {
+  margin: 0px;
+}
+/* line 1092, ../scss/breakpoints/_base.scss */
+#about_modal #cv .cv_list .show_name {
+  font-style: italic;
+  font-weight: 300;
+}
+/* line 1099, ../scss/breakpoints/_base.scss */
+#about_modal #contact_info {
+  text-align: center;
+}
+/* line 1101, ../scss/breakpoints/_base.scss */
+#about_modal #contact_info a {
+  text-decoration: none;
+}
+
+/* line 1109, ../scss/breakpoints/_base.scss */
 #post-not-found {
   background-color: #333333;
 }
-/* line 985, ../scss/breakpoints/_base.scss */
+/* line 1111, ../scss/breakpoints/_base.scss */
 #post-not-found a {
   font-size: 3em;
   background-color: #b3b3b3;
@@ -2545,265 +2678,6 @@ you can add resource intensive styles.
   /*********************
   MY STYLES
   *********************/
-  /* line 297, ../scss/breakpoints/_768up.scss */
-  .home {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-  }
-
-  /* line 305, ../scss/breakpoints/_768up.scss */
-  .home #content #main {
-    height: calc(100vh - 120px);
-    overflow: hidden;
-    position: relative;
-  }
-  /* line 310, ../scss/breakpoints/_768up.scss */
-  .home #content #main > * {
-    height: 100%;
-    overflow: auto;
-  }
-
-  /* line 316, ../scss/breakpoints/_768up.scss */
-  .about {
-    margin-top: 0%;
-    padding-top: 2%;
-    float: left;
-    width: 25%;
-    padding-right: 1%;
-    padding-left: 1%;
-  }
-
-  /* line 325, ../scss/breakpoints/_768up.scss */
-  .galleries {
-    float: right;
-    width: 75%;
-    padding-left: 5%;
-  }
-  /* line 330, ../scss/breakpoints/_768up.scss */
-  .galleries .book_gallery {
-    margin: 5% 4%;
-    display: inline-block;
-    position: relative;
-    height: 200px;
-    width: 200px;
-    right: 0px;
-    transition: right 1s;
-  }
-  /* line 340, ../scss/breakpoints/_768up.scss */
-  .galleries .book_gallery:hover {
-    right: 40px;
-  }
-  /* line 342, ../scss/breakpoints/_768up.scss */
-  .galleries .book_gallery:hover .hover_thumb {
-    right: -80px;
-  }
-  /* line 346, ../scss/breakpoints/_768up.scss */
-  .galleries .book_gallery .book_wrapper {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    padding: 10%;
-    background-color: #808080;
-    z-index: 2;
-  }
-  /* line 354, ../scss/breakpoints/_768up.scss */
-  .galleries .book_gallery .book_wrapper .gallery_item {
-    height: 100%;
-    width: 100%;
-    margin: auto;
-  }
-  /* line 365, ../scss/breakpoints/_768up.scss */
-  .galleries .book_gallery .hover_thumb {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    transition: right 1s;
-    right: 0px;
-  }
-
-  /* line 380, ../scss/breakpoints/_768up.scss */
-  .single {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-  }
-
-  /* line 388, ../scss/breakpoints/_768up.scss */
-  .single #content #main {
-    height: calc(100vh - 120px);
-    position: relative;
-  }
-  /* line 391, ../scss/breakpoints/_768up.scss */
-  .single #content #main > * {
-    height: 100%;
-    overflow: auto;
-  }
-
-  /* line 396, ../scss/breakpoints/_768up.scss */
-  .gallery_single {
-    padding: 0;
-    float: right;
-    width: 75%;
-  }
-
-  /* line 401, ../scss/breakpoints/_768up.scss */
-  .picture_item {
-    height: 55vh;
-    margin: 6%;
-  }
-
-  /* line 407, ../scss/breakpoints/_768up.scss */
-  .desktop_only {
-    display: initial;
-  }
-
-  /* line 410, ../scss/breakpoints/_768up.scss */
-  #navigation {
-    width: calc(100% - 290px);
-    display: inline-block;
-  }
-  /* line 414, ../scss/breakpoints/_768up.scss */
-  #navigation #header_button {
-    top: -5px;
-    background-color: #b3b3b3;
-    color: #333333;
-    font-size: 20px;
-    display: block;
-    width: 150px;
-    padding: 12px 0;
-    text-align: center;
-    margin: 0 auto;
-    cursor: pointer;
-    position: relative;
-    z-index: 10;
-    box-shadow: inset -9px -9.6px 16px -5px rgba(0, 0, 0, 0.17), inset -9px 9.6px 32px -4.8px rgba(255, 255, 255, 0.15), inset 0 0 0px 0.8px rgba(255, 255, 255, 0.12);
-    transition: background-color .5s, color .5s, top 1s 1s;
-  }
-  /* line 429, ../scss/breakpoints/_768up.scss */
-  #navigation #header_button:hover {
-    background-color: #9a9a9a;
-    color: #4d4d4d;
-  }
-  /* line 435, ../scss/breakpoints/_768up.scss */
-  #navigation #book_nav {
-    overflow: hidden;
-    text-align: center;
-    position: absolute;
-    display: inline-block;
-    text-align: center;
-    width: calc(100% - 285px);
-    margin-top: -20px;
-    opacity: 0;
-    letter-spacing: -1em;
-    transition: all 1s, margin-top 1s 1s, opacity 1s;
-  }
-  /* line 447, ../scss/breakpoints/_768up.scss */
-  #navigation #book_nav #book_items {
-    padding: 0;
-    list-style: none;
-    text-align: center;
-  }
-  /* line 451, ../scss/breakpoints/_768up.scss */
-  #navigation #book_nav #book_items .book_item {
-    vertical-align: text-top;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
-    position: relative;
-    overflow: auto;
-    transition: all 1s;
-    margin: 0 0 0 -10px;
-    min-width: 10px;
-    height: 100px;
-  }
-  /* line 462, ../scss/breakpoints/_768up.scss */
-  #navigation #book_nav #book_items .book_item .book_id {
-    position: absolute;
-    left: 15%;
-    display: inline;
-    opacity: 1;
-    transition: opacity .8s .5s;
-  }
-  /* line 469, ../scss/breakpoints/_768up.scss */
-  #navigation #book_nav #book_items .book_item .book_title {
-    letter-spacing: 0;
-    max-width: 0;
-    white-space: nowrap;
-    display: inline-block;
-    text-decoration: none;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-width 1s ease-out, opacity 1s;
-  }
-  /* line 480, ../scss/breakpoints/_768up.scss */
-  #navigation #book_nav #book_items .book_item:hover .book_id {
-    opacity: 0;
-    transition: opacity .5s;
-  }
-  /* line 484, ../scss/breakpoints/_768up.scss */
-  #navigation #book_nav #book_items .book_item:hover .book_title {
-    opacity: 1;
-    max-width: 120px;
-    text-decoration: none;
-  }
-  /* line 491, ../scss/breakpoints/_768up.scss */
-  #navigation #book_nav #book_items .book_item.current .book_id {
-    opacity: 0;
-    transition: opacity .5s;
-  }
-  /* line 495, ../scss/breakpoints/_768up.scss */
-  #navigation #book_nav #book_items .book_item.current .book_title {
-    opacity: 0;
-    transition: opacity .5s, letter-spacing .3s;
-    letter-spacing: -6px;
-    max-width: 120px;
-  }
-  /* line 507, ../scss/breakpoints/_768up.scss */
-  #navigation.open #header_button {
-    background-color: #333333;
-    color: #b3b3b3;
-    top: -30px;
-    border: 1px #4d4d4d solid;
-    box-shadow: inset -9px -9.6px 16px -5px rgba(255, 255, 255, 0.03), inset -9px 9.6px 32px -4.8px rgba(0, 0, 0, 0.15), inset 0 0 0px 0.8px rgba(0, 0, 0, 0.12);
-    transition: top 1s;
-  }
-  /* line 515, ../scss/breakpoints/_768up.scss */
-  #navigation.open #header_button:hover {
-    background-color: #4d4d4d;
-    color: #9a9a9a;
-  }
-  /* line 520, ../scss/breakpoints/_768up.scss */
-  #navigation.open #book_nav {
-    margin-top: -35px;
-    opacity: 1;
-    letter-spacing: 20px;
-    transition: all 1s, letter-spacing 1s 0.5s, opacity 1s .4s;
-  }
-  /* line 526, ../scss/breakpoints/_768up.scss */
-  #navigation.open #book_nav #book_items .book_item {
-    transition: margin 1s 1s;
-    margin: 0 15px 0 0px;
-  }
-  /* line 529, ../scss/breakpoints/_768up.scss */
-  #navigation.open #book_nav #book_items .book_item .book_id {
-    text-decoration: none;
-  }
-  /* line 533, ../scss/breakpoints/_768up.scss */
-  #navigation.open #book_nav #book_items .book_item.current .book_title {
-    opacity: 1;
-    transition: opacity .5s, letter-spacing .5s .8s;
-    letter-spacing: 0px;
-    max-width: 120px;
-    text-decoration: none;
-    border-bottom-width: 1px;
-    border-bottom-color: #4d4d4d;
-    border-bottom-style: solid;
-  }
 }
 /*********************
 DESKTOP
@@ -2825,6 +2699,355 @@ you can add resource intensive styles.
   /* line 12, ../scss/breakpoints/_1030up.scss */
   .wrap {
     width: 1040px;
+  }
+
+  /* line 17, ../scss/breakpoints/_1030up.scss */
+  .about .about_title {
+    font-size: 1.75em;
+  }
+
+  /* line 24, ../scss/breakpoints/_1030up.scss */
+  html {
+    overflow: hidden;
+    max-height: 100vh;
+  }
+
+  /* line 29, ../scss/breakpoints/_1030up.scss */
+  .home {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  /* line 37, ../scss/breakpoints/_1030up.scss */
+  .home #content #main {
+    height: calc(100vh - 120px);
+    overflow: hidden;
+    position: relative;
+  }
+  /* line 42, ../scss/breakpoints/_1030up.scss */
+  .home #content #main > * {
+    height: 100%;
+    overflow: auto;
+  }
+
+  /* line 48, ../scss/breakpoints/_1030up.scss */
+  .about {
+    margin-top: 0%;
+    padding-top: 2%;
+    float: left;
+    width: 25%;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: 0px;
+  }
+  /* line 56, ../scss/breakpoints/_1030up.scss */
+  .about h2 {
+    margin-top: 0px;
+  }
+  /* line 59, ../scss/breakpoints/_1030up.scss */
+  .about .about_title {
+    font-size: 1.25em;
+  }
+  /* line 63, ../scss/breakpoints/_1030up.scss */
+  .about .about_text p {
+    margin: 0px;
+  }
+  /* line 66, ../scss/breakpoints/_1030up.scss */
+  .about .about_text #more_button {
+    width: 120px;
+    line-height: 1em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* line 75, ../scss/breakpoints/_1030up.scss */
+  .galleries {
+    float: right;
+    width: 75%;
+    padding-left: 5%;
+  }
+  /* line 80, ../scss/breakpoints/_1030up.scss */
+  .galleries .book_gallery {
+    margin: 5% 4%;
+    display: inline-block;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    right: 0px;
+    transition: right 1s;
+  }
+  /* line 90, ../scss/breakpoints/_1030up.scss */
+  .galleries .book_gallery:hover {
+    right: 40px;
+  }
+  /* line 92, ../scss/breakpoints/_1030up.scss */
+  .galleries .book_gallery:hover .hover_thumb {
+    right: -80px;
+  }
+  /* line 96, ../scss/breakpoints/_1030up.scss */
+  .galleries .book_gallery .book_wrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 10%;
+    background-color: #8E8E8E;
+    z-index: 2;
+  }
+  /* line 104, ../scss/breakpoints/_1030up.scss */
+  .galleries .book_gallery .book_wrapper .gallery_item {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+  }
+  /* line 110, ../scss/breakpoints/_1030up.scss */
+  .galleries .book_gallery .book_wrapper .gallery_item .gallery_thumb {
+    position: initial;
+  }
+  /* line 115, ../scss/breakpoints/_1030up.scss */
+  .galleries .book_gallery .hover_thumb {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    transition: right 1s;
+    right: 0px;
+  }
+
+  /* line 125, ../scss/breakpoints/_1030up.scss */
+  #content {
+    position: relative;
+  }
+
+  /* line 129, ../scss/breakpoints/_1030up.scss */
+  .modal_wrapper {
+    position: absolute;
+    z-index: 4;
+    top: 100%;
+    bottom: 0;
+    overflow: auto;
+    transition: top 1s ease-out;
+  }
+  /* line 137, ../scss/breakpoints/_1030up.scss */
+  .modal_wrapper .modal #close_modal {
+    width: 100px;
+    margin-left: 1%;
+    position: sticky;
+    top: 10px;
+  }
+  /* line 144, ../scss/breakpoints/_1030up.scss */
+  .modal_wrapper .modal#about_modal {
+    background-color: #333333;
+    position: relative;
+    top: 0px;
+  }
+  /* line 150, ../scss/breakpoints/_1030up.scss */
+  .modal_wrapper.open {
+    top: 0px;
+    transition: top 1s ease-in;
+  }
+
+  /* line 161, ../scss/breakpoints/_1030up.scss */
+  .text_button {
+    cursor: pointer;
+    background-color: #333333;
+    color: #b3b3b3;
+    border: 1px #4d4d4d solid;
+    padding: 10px;
+    text-align: center;
+  }
+  /* line 168, ../scss/breakpoints/_1030up.scss */
+  .text_button:hover {
+    background-color: #4d4d4d;
+    color: #9a9a9a;
+  }
+
+  /* line 176, ../scss/breakpoints/_1030up.scss */
+  .single {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  /* line 184, ../scss/breakpoints/_1030up.scss */
+  .single #content #main {
+    height: calc(100vh - 120px);
+    position: relative;
+  }
+  /* line 187, ../scss/breakpoints/_1030up.scss */
+  .single #content #main > * {
+    height: 100%;
+    overflow: auto;
+  }
+
+  /* line 192, ../scss/breakpoints/_1030up.scss */
+  .gallery_single {
+    padding: 0;
+    float: right;
+    width: 75%;
+  }
+
+  /* line 197, ../scss/breakpoints/_1030up.scss */
+  .picture_item {
+    height: 55vh;
+    margin: 6%;
+  }
+
+  /* line 203, ../scss/breakpoints/_1030up.scss */
+  .desktop_only {
+    display: initial;
+  }
+
+  /* line 207, ../scss/breakpoints/_1030up.scss */
+  .mobile_only {
+    display: none;
+  }
+
+  /* line 211, ../scss/breakpoints/_1030up.scss */
+  #navigation {
+    width: calc(100% - 290px);
+    display: inline-block;
+    position: inherit;
+    top: inherit;
+    right: inherit;
+  }
+  /* line 218, ../scss/breakpoints/_1030up.scss */
+  #navigation #header_button {
+    top: -5px;
+    background-color: #b3b3b3;
+    color: #333333;
+    font-size: 20px;
+    display: block;
+    width: 150px;
+    padding: 12px 0;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    transition: background-color .5s, color .5s, top 1s 1s;
+  }
+  /* line 232, ../scss/breakpoints/_1030up.scss */
+  #navigation #header_button:hover {
+    background-color: #9a9a9a;
+    color: #4d4d4d;
+  }
+  /* line 238, ../scss/breakpoints/_1030up.scss */
+  #navigation #book_nav {
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    width: calc(100% - 285px);
+    margin-top: -20px;
+    opacity: 0;
+    letter-spacing: -1em;
+    transition: all 1s, margin-top 1s 1s, opacity 1s;
+  }
+  /* line 250, ../scss/breakpoints/_1030up.scss */
+  #navigation #book_nav #book_items {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  /* line 254, ../scss/breakpoints/_1030up.scss */
+  #navigation #book_nav #book_items .book_item {
+    vertical-align: text-top;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: auto;
+    transition: all 1s;
+    margin: 0 0 0 -10px;
+    min-width: 10px;
+    height: 100px;
+  }
+  /* line 265, ../scss/breakpoints/_1030up.scss */
+  #navigation #book_nav #book_items .book_item .book_id {
+    position: absolute;
+    left: 15%;
+    display: inline;
+    opacity: 1;
+    transition: opacity .8s .5s;
+  }
+  /* line 272, ../scss/breakpoints/_1030up.scss */
+  #navigation #book_nav #book_items .book_item .book_title {
+    letter-spacing: 0;
+    max-width: 0;
+    white-space: nowrap;
+    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-width 1s ease-out, opacity 1s;
+  }
+  /* line 283, ../scss/breakpoints/_1030up.scss */
+  #navigation #book_nav #book_items .book_item:hover .book_id {
+    opacity: 0;
+    transition: opacity .5s;
+  }
+  /* line 287, ../scss/breakpoints/_1030up.scss */
+  #navigation #book_nav #book_items .book_item:hover .book_title {
+    opacity: 1;
+    max-width: 140px;
+    text-decoration: none;
+  }
+  /* line 294, ../scss/breakpoints/_1030up.scss */
+  #navigation #book_nav #book_items .book_item.current .book_id {
+    opacity: 0;
+    transition: opacity .5s;
+  }
+  /* line 298, ../scss/breakpoints/_1030up.scss */
+  #navigation #book_nav #book_items .book_item.current .book_title {
+    opacity: 0;
+    transition: opacity .5s, letter-spacing .3s;
+    letter-spacing: -6px;
+    max-width: 140px;
+  }
+  /* line 310, ../scss/breakpoints/_1030up.scss */
+  #navigation.open #header_button {
+    background-color: #333333;
+    color: #b3b3b3;
+    top: -30px;
+    border: 1px #4d4d4d solid;
+    transition: top 1s;
+  }
+  /* line 316, ../scss/breakpoints/_1030up.scss */
+  #navigation.open #header_button:hover {
+    background-color: #4d4d4d;
+    color: #9a9a9a;
+  }
+  /* line 321, ../scss/breakpoints/_1030up.scss */
+  #navigation.open #book_nav {
+    margin-top: -35px;
+    opacity: 1;
+    letter-spacing: 20px;
+    transition: all 1s, letter-spacing 1s 0.5s, opacity 1s .4s;
+  }
+  /* line 327, ../scss/breakpoints/_1030up.scss */
+  #navigation.open #book_nav #book_items .book_item {
+    transition: margin 1s 1s;
+    margin: 0 15px 0 0px;
+  }
+  /* line 330, ../scss/breakpoints/_1030up.scss */
+  #navigation.open #book_nav #book_items .book_item .book_id {
+    text-decoration: none;
+  }
+  /* line 334, ../scss/breakpoints/_1030up.scss */
+  #navigation.open #book_nav #book_items .book_item.current .book_title {
+    opacity: 1;
+    transition: opacity .5s, letter-spacing .5s .8s;
+    letter-spacing: 0px;
+    max-width: 140px;
+    text-decoration: none;
+    border-bottom-width: 1px;
+    border-bottom-color: #4d4d4d;
+    border-bottom-style: solid;
   }
 }
 /*********************

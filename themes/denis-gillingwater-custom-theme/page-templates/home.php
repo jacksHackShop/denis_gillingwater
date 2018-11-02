@@ -11,7 +11,8 @@
  *
  * For more info: http://codex.wordpress.org/Page_Templates
 */	
-$about = get_field("about_the_artist"); 
+
+$current_post_id = get_the_ID();
 ?>
 
 <?php get_header(); ?>
@@ -47,11 +48,14 @@ $about = get_field("about_the_artist");
 									</div>
 								</article>
 							
-							<?php endwhile;?>
+							<?php endwhile;
+							wp_reset_postdata(); ?>
 							</div>
-							<div class="about">
+							<div class="about desktop_only">
+								<h2>ARTIST STATEMENT</h2>
 								<div class="about_text">
-									<?php echo $about; ?>
+									<?php echo substr(get_field('artist_statement'), 0, 1000); ?>...
+									<div id="more_button" class="text_button">SEE MORE</div>
 								</div>
 								<p class="copyright"> © 2018 Denis Gillingwater </p>
 							</div>
@@ -72,6 +76,97 @@ $about = get_field("about_the_artist");
 
 						</main>
 
+				</div>
+				<div class="modal_wrapper" id='modal_wrapper'>
+					<div class='modal' id='about_modal'>
+						<div class="text_button desktop_only" id='close_modal'>CLOSE</div>
+						<div id='modal_content'>		
+							<section id="artist_statement">
+								<h2 class="section_header">ARTIST STATEMENT</h2>
+								<div><?php echo get_field('artist_statement') ; ?></div>
+							</section>
+							<section id="bio">
+								<h2 class="section_header">BIO</h2>
+								<div><?php echo get_field('bio') ; ?></div>
+							</section>
+							<section id="cv">
+								<h2 class="section_header">SOLO EXHIBITIONS AND SHOWS</h2>
+								<div>
+									<ul class="cv_list">
+										<?php $solo_shows = get_field('solo_exhibitions_and_shows') ; 
+										foreach ($solo_shows as $show) : 
+											$link = $show['link'];
+											$venue = $show['venue'];
+											$show_name = $show['show_name']; ?>
+											<li>
+												<?php if ($link != '') : ?>
+												<a href="<?php echo $link ;?>">
+												<?php endif ; ?>
+													<p class="venue"><?php echo $venue; ?></p>
+													<?php if ($show_name != '') : ?>
+													<p class="show_name">( <?php echo $show_name; ?> )</p>
+													<?php endif; ?>
+												<?php if ($link != '') : ?>
+												</a>
+												<?php endif; ?>
+											</li>
+										<?php endforeach; ?>
+									</ul>
+								</div>
+								<h2 class="section_header">GROUP SHOWS</h2>
+								<div>
+									<ul class="cv_list">
+										<?php $group_shows = get_field('group_shows') ; 
+										foreach ($group_shows as $show) : 
+											$link = $show['link'];
+											$venue = $show['venue'];
+											$show_name = $show['show_name']; ?>
+											<li>
+												<?php if ($link != '') : ?>
+												<a href="<?php echo $link ;?>">
+												<?php endif ; ?>
+													<p class="venue"><?php echo $venue; ?></p>
+													<?php if ($show_name != '') : ?>
+													<p class="show_name">( <?php echo $show_name; ?> )</p>
+													<?php endif; ?>
+												<?php if ($link != '') : ?>
+												</a>
+												<?php endif; ?>
+											</li>
+										<?php endforeach; ?>
+									</ul>
+								</div>
+								<h2 class="section_header">RESIDENCIES</h2>
+								<div>
+									<ul class="cv_list">
+										<?php $solo_shows = get_field('residencies') ; 
+										foreach ($solo_shows as $show) : 
+											$link = $show['link'];
+											$venue = $show['venue'];?>
+											<li>
+											<?php if ($link != '') : ?>
+												<a href="<?php echo $link ;?>">
+											<?php endif ; ?>
+													<p><?php echo $venue; ?></p>
+												<?php if ($link != '') : ?>
+												</a>
+												<?php endif; ?>
+											</li>
+										<?php endforeach; ?>
+									</ul>
+								</div>
+							</section>
+							<section id="contact_info">
+								<h2 class="section_header">CONTACT INFO</h2>
+								<div id="contact_email">
+									<span>EMAIL: <a href="mailto:<?php echo get_field('email') ?>"><?php echo get_field('email') ?></a></span>
+								</div>
+								<div id="contact_phone">
+									<span>PHONE: <a href="tel:<?php echo get_field('phone_number') ?>"><?php echo get_field('phone_number') ?></a></span>
+								</div>
+							</section>
+						</div>
+					</div>
 				</div>
 
 			</div>

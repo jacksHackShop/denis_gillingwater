@@ -247,4 +247,19 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
+
+/*===============================================
+=            AZULA CODES STARTS HERE            =
+===============================================*/
+
+
+function denis_fonts() {
+  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?Source+Sans+Pro:300i,400,600');
+}
+
+
+add_action('wp_enqueue_scripts', 'denis_fonts');
+
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
