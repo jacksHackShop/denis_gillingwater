@@ -76,6 +76,7 @@ html {
     float: right;
     width: 75%;
     padding-left: 5%;
+    justify-content: initial;
 
     .book_gallery{
         margin: 5% 4%;
@@ -114,6 +115,7 @@ html {
         }
         .hover_thumb {
             position: absolute;
+            display: initial;
             z-index: 1;
             top:0;
             transition: right 1s;
@@ -131,6 +133,7 @@ html {
     z-index: 4;
     top: 100%;
     bottom: 0;
+    background-color: $dark_gray;
     overflow: auto;
     transition: top 1s ease-out;
     .modal {
@@ -142,7 +145,6 @@ html {
         }
         
         &#about_modal {
-            background-color: $dark_gray;
             position: relative;
             top: 0px;
         }

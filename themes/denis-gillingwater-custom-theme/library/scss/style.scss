@@ -116,6 +116,17 @@ This is for the larger monitors and possibly full screen viewers.
 	// styles in 1240up.scss
 	@import "breakpoints/1240up";
 
+} 
+
+/*********************
+UHD SIZE
+This is for the larger monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 3000px) {
+
+	// styles in 1240up.scss
+	@import "breakpoints/3000up";
+
 } // end of media query
 
 /*********************

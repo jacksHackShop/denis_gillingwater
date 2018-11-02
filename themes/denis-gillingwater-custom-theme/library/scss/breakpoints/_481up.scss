@@ -115,3 +115,29 @@ do they need tweaking?
 	}
 } /* end .footer-links */
 
+/*************************
+AZULA CODES STYLES
+*************************/
+
+.hentry{
+	margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: 42%;
+    width: 42%;
+    display: inline-block;
+}
+
+.galleries {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    &:after{
+    	content: '';
+    	margin: auto;
+    }
+	.book_gallery .hover_thumb {
+	display: none;
+	}
+}

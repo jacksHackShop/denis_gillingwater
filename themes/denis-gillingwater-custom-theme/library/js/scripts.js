@@ -174,6 +174,11 @@ window.addEventListener('DOMContentLoaded', function(){
     });
   }
 
+  var artist_statement = document.getElementById('artist_statement');
+  if (window.innerWidth > 1700 && artist_statement) {
+    artist_statement.innerHTML = decodeURI(artist_statement.dataset.artistStatement);
+  }
+
   // create listeners
 });
 
